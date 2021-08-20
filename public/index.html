@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Socket IO</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Bands</h1>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"></script>
+    <script>
+
+        const socket = io('http://localhost:8080/');
+
+        socket.on('current-bands', ( data ) => {
+            console.log(data);
+        });
+
+    </script>
+</body>
+</html>
